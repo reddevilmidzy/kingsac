@@ -11,7 +11,12 @@ impl Team {
     fn new(name: String, members: Vec<User>) -> Self {
         Self { name, members }
     }
+
+    fn is_all_adult(&self) -> bool {
+        self.members.iter().all(|user| user.is_adult())
+    }
 }
+
 struct User {
     username: String,
     age: u8,
@@ -59,5 +64,18 @@ mod tests {
     fn test_user_is_adult() {
         let user = User::new("Redddy".to_string(), 20);
         assert_eq!(user.is_adult(), true);
+    }
+
+    #[test]
+    fn test_team_is_all_adult() {
+        let team = Team::new(
+            "사자보이즈".to_string(),
+            vec![
+                User::new("베이비".to_string(), 20),
+                User::new("애비".to_string(), 20),
+                User::new("진우".to_string(), 400),
+            ],
+        );
+        assert_eq!(team.is_all_adult(), true);
     }
 }
