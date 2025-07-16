@@ -11,7 +11,12 @@ impl Team {
     fn new(name: String, members: Vec<User>) -> Self {
         Self { name, members }
     }
+
+    fn print() {
+        println!("hello");
+    }
 }
+
 struct User {
     username: String,
     age: u8,
