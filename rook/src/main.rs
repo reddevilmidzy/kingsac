@@ -2,6 +2,16 @@ fn main() {
     println!("??");
 }
 
+struct Team {
+    name: String,
+    members: Vec<User>,
+}
+
+impl Team {
+    fn new(name: String, members: Vec<User>) -> Self {
+        Self { name, members }
+    }
+}
 struct User {
     username: String,
     age: u8,
@@ -42,6 +52,7 @@ mod tests {
     fn test_user_new() {
         let user = User::new("Redddy".to_string(), 20);
         assert_eq!(user.get_username(), "Redddy");
+        assert_eq!(user.get_age(), 20);
     }
 
     #[test]
