@@ -43,4 +43,10 @@ mod tests {
         let user = User::new("Redddy".to_string(), 20);
         assert_eq!(user.get_username(), "Redddy");
     }
+
+    #[test]
+    fn test_user_is_adult() {
+        let user = User::new("Redddy".to_string(), 20);
+        assert_eq!(user.is_adult(), true);
+    }
 }
