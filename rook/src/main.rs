@@ -12,6 +12,7 @@ impl Team {
         Self { name, members }
     }
 }
+
 struct User {
     username: String,
     age: u8,
@@ -32,6 +33,11 @@ impl User {
 
     fn get_age(&self) -> u8 {
         self.age
+    }
+
+    
+    fn hello() {
+        println!("hello");
     }
 }
 
@@ -59,5 +65,10 @@ mod tests {
     fn test_user_is_adult() {
         let user = User::new("Redddy".to_string(), 20);
         assert_eq!(user.is_adult(), true);
+    }
+
+    #[test]
+    fn test_hello() {
+        User::hello();
     }
 }
