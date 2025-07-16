@@ -39,6 +39,10 @@ fn add(a: i32, b: i32) -> i32 {
     a + b
 }
 
+fn minus(a: i32, b: i32) -> i32 {
+    a - b
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -46,6 +50,11 @@ mod tests {
     #[test]
     fn test_add() {
         assert_eq!(add(1, 2), 3);
+    }
+
+    #[test]
+    fn test_minus() {
+        assert_eq!(minus(3, 2), 1);
     }
 
     #[test]
