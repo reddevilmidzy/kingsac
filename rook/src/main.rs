@@ -19,11 +19,11 @@ impl Team {
 
 struct User {
     username: String,
-    age: u8,
+    age: u16,
 }
 
 impl User {
-    fn new(username: String, age: u8) -> Self {
+    fn new(username: String, age: u16) -> Self {
         Self { username, age }
     }
 
@@ -35,7 +35,7 @@ impl User {
         &self.username
     }
 
-    fn get_age(&self) -> u8 {
+    fn get_age(&self) -> u16 {
         self.age
     }
 }
