@@ -12,6 +12,10 @@ impl User {
         Self { username, age }
     }
 
+    fn is_adult(&self) -> bool {
+        self.age >= 19
+    }
+
     fn get_username(&self) -> &str {
         &self.username
     }
@@ -32,5 +36,11 @@ mod tests {
     #[test]
     fn test_add() {
         assert_eq!(add(1, 2), 3);
+    }
+
+    #[test]
+    fn test_user_new() {
+        let user = User::new("Redddy".to_string(), 20);
+        assert_eq!(user.get_username(), "Redddy");
     }
 }
