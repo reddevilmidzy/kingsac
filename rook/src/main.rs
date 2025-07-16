@@ -2,7 +2,12 @@ fn main() {
 	println!("??");
 }
 
-fn flag -> bool {
+struct User {
+	name: String,
+	age: u32,
+}
+
+fn flag() -> bool {
 	true
 }
 
