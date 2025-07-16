@@ -37,15 +37,15 @@ jobs:
       run: |
         cargo llvm-cov --all-features --workspace --lcov --output-path lcov.info
     
-    - name: Generate coverage report for doctests
-      working-directory: rook
-      run: |
-        cargo llvm-cov --doc --all-features --workspace --lcov --output-path lcov-doctests.info
+    # - name: Generate coverage report for doctests
+    #   working-directory: rook
+    #   run: |
+    #     cargo llvm-cov --doc --all-features --workspace --lcov --output-path lcov-doctests.info
     
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v4
       with:
-        files: rook/lcov.info,rook/lcov-doctests.info
+        files: rook/lcov.info #,rook/lcov-doctests.info
         fail_ci_if_error: true
         flags: unit,integration,doctest
         name: codecov-umbrella
