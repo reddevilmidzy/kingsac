@@ -47,7 +47,6 @@ jobs:
       with:
         files: rook/lcov.info #,rook/lcov-doctests.info
         fail_ci_if_error: true
-        flags: unit,integration,doctest
         name: codecov-umbrella
         token: ${{ secrets.CODECOV_TOKEN }}
         verbose: true
