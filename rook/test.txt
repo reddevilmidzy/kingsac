@@ -2,4 +2,4 @@
 https://github.com/rust-lang/miri/blob/master/src/shims/intrinsics 
 
 아래는 브랜치 이름이 master에서 main으로 변경되었다.
-https://github.com/sindresorhus/cli-spinners/blob/master/spinners.json
+https://github.com/sindresorhus/cli-spinners/blob/main/spinners.json
